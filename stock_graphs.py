@@ -213,14 +213,14 @@ class StockVisualizer:
         line_color = self.green if change >= 0 else self.red
         
         # Plot the line
-        self.ax.plot(dates, prices, color=line_color, linewidth=1.5)
+        self.ax.plot(dates, prices, color=line_color, linewidth=2.5, alpha=1.0)
         
         # Fill under the line
-        self.ax.fill_between(dates, prices, alpha=0.1, color=line_color)
+        self.ax.fill_between(dates, prices, alpha=0.2, color=line_color)
         
         # Style the plot
-        self.ax.set_facecolor('#0d0d0d')
-        self.ax.grid(True, color=self.grid_color, alpha=0.3, linewidth=0.5)
+        self.ax.set_facecolor('#0d0d0d')  # Very dark background like the image
+        self.ax.grid(True, color='#404040', alpha=0.5, linewidth=1.0)  # Thicker grid lines
         self.ax.spines['top'].set_visible(False)
         self.ax.spines['right'].set_visible(False)
         self.ax.spines['left'].set_color(self.grid_color)
