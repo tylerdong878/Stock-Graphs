@@ -1,6 +1,6 @@
 # Stock-Graphs
 
-Interactive GUI application for stock price analysis with candlestick charts.
+Interactive GUI application for stock price analysis with line charts and real-time data.
 
 ## Quick Start
 
@@ -11,34 +11,35 @@ python stock_graphs.py
 
 ## Features
 
-- 🖥️ **Interactive GUI** - Clean, modern interface
-- 📊 **Candlestick Charts** - Professional stock visualization
-- 📈 **Price Analysis** - Start/end prices, changes, highs/lows
-- ⏰ **Flexible Periods** - Dropdown + custom input
-- 💾 **HTML Export** - Save and share charts
-- 🎨 **Dark Theme** - Easy on the eyes
+- 🖥️ **Interactive GUI** - Clean, modern dark theme interface
+- 📊 **Line Charts** - Professional stock price visualization
+- 📈 **Price Analysis** - Current price, changes, percentage gains/losses
+- ⏰ **Flexible Periods** - Predefined buttons + custom input
+- 🎨 **Dark Theme** - Easy on the eyes, professional appearance
+- 🔄 **Real-time Data** - Live stock data from Yahoo Finance
 
 ## Usage
 
 1. **Run the app**: `python stock_graphs.py`
-2. **Enter ticker**: Type stock symbol (e.g., AAPL, TSLA)
-3. **Select period**: Choose from dropdown or enter custom
-4. **Click Analyze**: View interactive chart and results
-5. **Save HTML**: Export chart for sharing
+2. **Enter ticker**: Type stock symbol (e.g., AAPL, TSLA, SPY)
+3. **Select period**: Click time period buttons or enter custom periods
+4. **View chart**: Interactive line chart with price data
+5. **Custom periods**: Use text box for specific timeframes
 
-## Periods
+## Time Periods
 
-**Dropdown Options**: `1d`, `5d`, `1mo`, `3mo`, `6mo`, `1y`, `2y`, `5y`, `10y`, `20y`, `max`
+**Button Options**: `YTD`, `1D`, `5D`, `1M`, `6M`, `1Y`, `5Y`, `Max`
 
 **Custom Input**: Any `[number][unit]` format:
-- `d` = days (e.g., `50d`)
-- `mo` = months (e.g., `3mo`) 
-- `y` = years (e.g., `2y`)
+- `Y` = years (e.g., `21Y`, `3Y`)
+- `M` = months (e.g., `3M`, `6M`) 
+- `D` = days (e.g., `45D`, `30D`)
+
+**Examples**: `21Y`, `3M`, `45D`, `21 years`, `6 months`, `30 days`
 
 ## Dependencies
 
 - yfinance
 - pandas  
-- plotly
+- matplotlib
 - numpy
-- tkinter (built-in)
