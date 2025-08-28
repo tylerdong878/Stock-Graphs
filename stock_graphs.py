@@ -32,7 +32,7 @@ class StockVisualizer:
         self.button_ax.axis('off')
         
         # Custom input area - positioned in bottom right corner
-        self.custom_ax = plt.axes([0.82, 0.02, 0.15, 0.04])
+        self.custom_ax = plt.axes([0.85, 0.02, 0.12, 0.04])
         self.custom_text = widgets.TextBox(self.custom_ax, 'Custom:', initial='')
         self.custom_text.on_submit(self.on_custom_submit)
         
@@ -109,10 +109,10 @@ class StockVisualizer:
     def create_buttons(self):
         """Create time period selector buttons"""
         periods = ['YTD', '1D', '5D', '1M', '6M', '1Y', '5Y', 'Max']
-        button_width = 0.09
+        button_width = 0.08
         spacing = 0.02
         total_width = len(periods) * button_width + (len(periods) - 1) * spacing
-        start_x = 0.82 - total_width - 0.02  # 0.02 gap before custom box
+        start_x = 0.8 - total_width - 0.02  # 0.02 gap before custom box
         
         self.buttons = {}
         self.button_backgrounds = {}
